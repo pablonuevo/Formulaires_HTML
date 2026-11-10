@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires HTML</title>
+</head>
+<body>
+    <main>
+        <form action="/traitement" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Identité & Sécurité</legend>
+                <input type="hidden" name="source" value="inscription_web">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="DUPONT" required="required">
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom" id="prenom" autofocus>
+                <label for="mdp">Mot de passe</label>
+                <input type="password" name="password" id="mdp" minlength="8">
+                <label for="photo">Photo de profil</label>
+                <input type="file" name="photo" id="photo" accept=".PNG">
+            </fieldset>
+            <fieldset>
+                <legend>Contact & Profil</legend>
+                <label for="email">Votre email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="tel">Téléphone</label>
+                <input type="tel" name="telephone" id="tel" pattern="[0-9]{10}">
+                <label for="site">Site web / Portfolio</label>
+                <input type="url" name="site" id="site">
+                <label for="color">Couleur du thème</label>
+                <input type="color" name="color" id="color" value="#fcc500">
+            </fieldset>
+            <fieldset>
+                <legend>Informations professionnelles</legend>
+                <label for="exp">Années d'expérience</label>
+                <input type="number" name="expérience" id="exp" min="0" max="50">
+                <label for="tjm">Taux Journalier Moyen (TJM)</label>
+                <input type="number" name="tjm" id="tjm" step="50" min="0">
+                <label for="niv">Niveau de séniorité estimé</label>
+                <input type="range" name="niveau" id="niv" min="1" max="5">
+                <label for="lng">Langages maîtrisés</label>
+                <input type="checkbox" name="langages" id="lng" value="JavaScript" checked>JavaScript
+                <input type="checkbox" name="langages" id="lng" value="PHP">PHP
+                <input type="checkbox" name="langages" id="lng" value="Python">Python
+                <input type="checkbox" name="langages" id="lng" value="Java">Java
+                <label for="stjr">Statut juridique</label>
+                <input type="radio" name="statut" value="entrepreneur">Auto-entrepreneur
+                <input type="radio" name="statut" value="SASU">SASU
+                <input type="radio" name="statut" value="EURL">EURL
+                <label for="rgn">Région d'intervention</label>
+                <select name="region" id="rgn" multiple="multiple">
+                    <optgroup label="Nord">
+                        <option value="nord-ouest">Nord-Ouest</option>
+                        <option value="nord-est">Nord-Est</option>
+                    </optgroup>
+                    <optgroup label="Sud">
+                        <option value="sud-ouest">Sud-Ouest</option>
+                        <option value="sud-est">Sud-Est</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Disponibilités & Finalisation</legend>
+                <label for="date">Date de disponibilité</label>
+                <input type="date" name="date" id="date" required>
+                <label for="audit">Dernier audit technique</label>
+                <input type="text" name="audit" id="audit" value="Non réalisé" disabled>
+                <label for="mtvn">Motivation</label>
+                <textarea id="mtvn" rows="8" maxlength="500"></textarea>
+                <label for="cgu">Conditions Générales d'Utilisation</label>
+                <input type="checkbox" name="cgu" id="cgu" required>
+                <button type="reset">Effacer</button>
+                <button type="submit">Soumettre le formulaire</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
