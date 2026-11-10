@@ -37,17 +37,21 @@
                 <input type="number" name="expérience" id="exp" min="0" max="50">
                 <label for="tjm">Taux Journalier Moyen (TJM)</label>
                 <input type="number" name="tjm" id="tjm" step="50" min="0">
+                <hr>
                 <label for="niv">Niveau de séniorité estimé</label>
                 <input type="range" name="niveau" id="niv" min="1" max="5">
+                <hr>
                 <label for="lng">Langages maîtrisés</label>
                 <input type="checkbox" name="langages" id="lng" value="JavaScript" checked>JavaScript
                 <input type="checkbox" name="langages" id="lng" value="PHP">PHP
                 <input type="checkbox" name="langages" id="lng" value="Python">Python
                 <input type="checkbox" name="langages" id="lng" value="Java">Java
+                <hr>
                 <label for="stjr">Statut juridique</label>
                 <input type="radio" name="statut" value="entrepreneur" id="stjr">Auto-entrepreneur
                 <input type="radio" name="statut" id="stjr" value="SASU">SASU
                 <input type="radio" name="statut" id="stjr" value="EURL">EURL
+                <hr>
                 <label for="rgn">Région d'intervention</label>
                 <select name="region" id="rgn" multiple="multiple">
                     <optgroup label="Nord">
@@ -64,12 +68,14 @@
                 <legend>Disponibilités & Finalisation</legend>
                 <label for="date">Date de disponibilité</label>
                 <input type="date" name="date" id="date" required>
+                <hr>
                 <label for="audit">Dernier audit technique</label>
                 <input type="text" name="audit" id="audit" value="Non réalisé" disabled>
-                <label for="mtvn">Motivation</label>
-                <textarea id="mtvn" rows="8" maxlength="500"></textarea>
+                <textarea id="mtvn" rows="8" maxlength="500">Votre motivation</textarea>
+                <hr>
                 <label for="cgu">Conditions Générales d'Utilisation</label>
                 <input type="checkbox" name="cgu" id="cgu" required>
+                <hr>
                 <button type="reset">Effacer</button>
                 <button type="submit">Soumettre le formulaire</button>
             </fieldset>
